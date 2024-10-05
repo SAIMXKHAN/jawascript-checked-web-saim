@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Jawacript-Checked-Web</title>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-center font-semibold text-3xl">
+            <i class="fas fa-university text-black"></i> Bank
+        </h1>
+        <br />
+        <div class="mb-4 mt-3 w-full">
+            <form id="paymentForm">
+                <label for="first-name" class="text-black font-semibold text-sm"> Name</label>
+                <input
+                    type="text"
+                    id="first-name"
+                    class="w-full mt-2 p-2 border border-gray-395 rounded-md text-sm"
+                    placeholder="Saim"
+                />
+                <p id="name-error" class="text-red-500 text-sm font-semibold"></p>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="text-black font-semibold text-sm">Email</label>
+            <input
+                type="email"
+                id="email"
+                class="w-full mt-2 p-2 border border-gray-395 rounded-md text-sm"
+                placeholder="Saim@example.com"
+            />
+            <p id="email-error" class="text-red-500 text-sm font-semibold"></p>
+        </div>
+
+        <h1 class="font-bold text-gray-600 mt-5 mb-2 text-lg">First Subscribe:</h1>
+        <input type="checkbox" id="myCheckBox" class="hidden" />
+        <label
+            for="myCheckBox"
+            id="subscription-lable"
+            class="cursor-pointer bg-red-600 text-white font-semibold py-2 w-full rounded inline-flex items-center justify-center"
+        >
+            <i class="fas fa-bell mr-2"></i>Subscribe
+        </label>
+        <p id="subResult" class="text-sm text-red-500 mt-3 font-semibold"></p>
+
+        <h1 class="font-bold text-gray-600 mt-5 mb-1 text-lg">
+            Select Your Payment Method: <i class="fas fa-credit-card text-red-600"></i>
+        </h1>
+        <div class="items-center space-x-4">
+            <input type="radio" id="masterCardBtn" name="card" />
+            <label
+                for="masterCardBtn"
+                class="text-lg font-bold text-center text-yellow-500 mb-6"
+            >MasterCard</label>
+            <input type="radio" id="payPalBtn" name="card" />
+            <label
+                for="payPalBtn"
+                class="text-lg font-bold text-center text-blue-600 mb-6"
+            >PayPal</label>
+            <input type="radio" id="visaBtn" name="card" />
+            <label
+                for="visaBtn"
+                class="text-lg font-bold text-center text-green-500 mb-6"
+            >Visa</label>
+        </div>
+        <p id="paymentResult" class="text-sm text-blue-500 mt-3 font-semibold"></p>
+        <button
+            type="submit"
+            id="mySubmit"
+            class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition duration-300 font-semibold text-md mt-3"
+        >
+            Continue to Payment
+        </button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
